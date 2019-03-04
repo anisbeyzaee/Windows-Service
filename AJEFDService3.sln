@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AJEFDService3", "AJEFDService3\AJEFDService3.csproj", "{91CC6D12-8AF9-492F-B236-5E1C8916BDD2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalResources", "LocalResources\LocalResources.csproj", "{6C4B659C-3A9E-4C4D-BDDA-1E2B6D8D772C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EarthNowResources", "EarthNowResources\EarthNowResources.csproj", "{4D99C944-82E4-4004-9141-6CBC63BB0758}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{91CC6D12-8AF9-492F-B236-5E1C8916BDD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91CC6D12-8AF9-492F-B236-5E1C8916BDD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91CC6D12-8AF9-492F-B236-5E1C8916BDD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C4B659C-3A9E-4C4D-BDDA-1E2B6D8D772C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C4B659C-3A9E-4C4D-BDDA-1E2B6D8D772C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C4B659C-3A9E-4C4D-BDDA-1E2B6D8D772C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C4B659C-3A9E-4C4D-BDDA-1E2B6D8D772C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D99C944-82E4-4004-9141-6CBC63BB0758}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D99C944-82E4-4004-9141-6CBC63BB0758}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D99C944-82E4-4004-9141-6CBC63BB0758}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D99C944-82E4-4004-9141-6CBC63BB0758}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

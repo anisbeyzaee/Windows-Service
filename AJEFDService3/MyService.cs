@@ -8,6 +8,7 @@ using System.ServiceProcess;
 using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.InteropServices;
+using IPathLibrary;
 
 namespace AJEFDService3
 {
@@ -71,7 +72,14 @@ namespace AJEFDService3
             timer.Start();
 
             //code goes here
-            
+
+           // ReadConfig rc = new ReadConfig();
+           // rc.ReadObjType();
+            //String[] list = rc.ReadObjType();
+            //IPath obj = ObjectFactoryPath.Create(list);
+           // Console.WriteLine(obj);
+           // Console.Read();
+
             // end of code
 
             // Update the service state to Running.
