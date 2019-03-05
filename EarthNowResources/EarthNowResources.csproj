@@ -49,6 +49,10 @@
       <Project>{91CC6D12-8AF9-492F-B236-5E1C8916BDD2}</Project>
       <Name>AJEFDService3</Name>
     </ProjectReference>
+    <ProjectReference Include="..\IPath\IPathLibrary.csproj">
+      <Project>{5d3a947b-e0a4-435b-9a57-c3ebb2812267}</Project>
+      <Name>IPathLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

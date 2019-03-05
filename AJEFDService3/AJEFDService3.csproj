@@ -48,7 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExternalComcs.cs" />
-    <Compile Include="IPath.cs" />
     <Compile Include="MyService.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -76,6 +75,12 @@
     <EmbeddedResource Include="ProjectInstaller.resx">
       <DependentUpon>ProjectInstaller.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IPath\IPathLibrary.csproj">
+      <Project>{5d3a947b-e0a4-435b-9a57-c3ebb2812267}</Project>
+      <Name>IPathLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

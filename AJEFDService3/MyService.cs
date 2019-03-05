@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 using IPathLibrary;
 
+
 namespace AJEFDService3
 {
     public partial class MyService : ServiceBase
@@ -39,6 +40,14 @@ namespace AJEFDService3
             public int dwWaitHint;
         };
 
+
+        public void onDebug()
+        {
+            OnStart(null);
+
+        }
+
+
         public MyService()
         {
             InitializeComponent();
@@ -65,6 +74,10 @@ namespace AJEFDService3
 
             eventLog1.WriteEntry("In OnStart");
 
+
+            System.IO.File.Create(AppDomain.CurrentDomain.BaseDirectory + "LogFileForTest.txt");
+
+
             // Set up a timer that triggers every minute.
             System.Timers.Timer timer = new System.Timers.Timer();
             timer.Interval = 60000; // 60 seconds
@@ -73,12 +86,20 @@ namespace AJEFDService3
 
             //code goes here
 
-           // ReadConfig rc = new ReadConfig();
-           // rc.ReadObjType();
-            //String[] list = rc.ReadObjType();
-            //IPath obj = ObjectFactoryPath.Create(list);
-           // Console.WriteLine(obj);
-           // Console.Read();
+            ReadConfig rc = new ReadConfig();
+            //rc.ReadObjType();
+            String[] list = rc.ReadObjType();
+            IPath obj = ObjectFactoryPath.Create(list);
+
+            
+            
+            ExternalComcs ec = new ExternalComcs(obj.getPath());
+            //IObj = customerObj;
+            //return IObj;
+
+
+            // Console.WriteLine(obj);
+            // Console.Read();
 
             // end of code
 
@@ -90,8 +111,9 @@ namespace AJEFDService3
         protected override void OnStop()
         {
 
+            
+            System.IO.File.Create(AppDomain.CurrentDomain.BaseDirectory + "LogFileForTestONSTOP.txt");
             eventLog1.WriteEntry("In OnStop.");
-
         }
 
         public void OnTimer(object sender, System.Timers.ElapsedEventArgs args)

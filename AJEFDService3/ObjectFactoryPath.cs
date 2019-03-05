@@ -10,9 +10,11 @@ namespace AJEFDService3
     class ObjectFactoryPath
     {
 
-
+        
         public static IPath Create(String[] fileInfo)
         {
+            Boolean fExist = true;
+            Boolean readDll = true;
             string getPath;
             //String[] info;
             String[] myList;
@@ -22,12 +24,12 @@ namespace AJEFDService3
             String nameSpace = myList[2];
             String className = myList[3];
 
-            string thisClientDirectory = GetThisAssemblyDirectory();
+            string thisClientDirectory =  GetThisAssemblyDirectory();
             string dllPath = Path.Combine(thisClientDirectory, dllFileName);
             if (!File.Exists(dllPath))
             {
-                Console.WriteLine("ERROR: File " + dllPath + " does not exist");
-
+               // Console.WriteLine("ERROR: File " + dllPath + " does not exist");
+                fExist = false;
             }
 
             // Load the DLL
@@ -36,7 +38,8 @@ namespace AJEFDService3
             Type t = customDLL.GetType(className);
             if (t == null)
             {
-                Console.WriteLine("ERROR: Can't find class named " + dllFileName + " for now in DLL " + dllPath);
+                //Console.WriteLine("ERROR: Can't find class named " + dllFileName + " for now in DLL " + dllPath);
+                readDll = false;
 
             }
 
@@ -51,11 +54,7 @@ namespace AJEFDService3
             }
 
 
-            IPath customerObj = (IPath)o;
-            getPath = customerObj.getPath();
-            ExternalComcs ec = new ExternalComcs(getPath);
-            IObj = customerObj;
-            return IObj;
+            return o as IPath;
 
         }
         private static string GetThisAssemblyDirectory()

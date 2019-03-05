@@ -41,13 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LocalResource.cs" />
+    <Compile Include="LocalSource.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AJEFDService3\AJEFDService3.csproj">
-      <Project>{91CC6D12-8AF9-492F-B236-5E1C8916BDD2}</Project>
-      <Name>AJEFDService3</Name>
+    <ProjectReference Include="..\IPath\IPathLibrary.csproj">
+      <Project>{5D3A947B-E0A4-435B-9A57-C3EBB2812267}</Project>
+      <Name>IPathLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
